@@ -62,34 +62,6 @@
         </div>
       </div>
     </section>
-
-    <section class="section">
-      <h2 class="section-title">Audio Preview</h2>
-      <p class="text">Press the play button to listen to our sample review and enjoy the welcome message.</p>
-
-      <div class="audio-card">
-        <audio id="successAudio" preload="metadata" ontimeupdate="updateAudioProgress()" onloadedmetadata="initAudioDuration()" onended="resetAudioPlayer()">
-          <source src="audio/preview.mp3" type="audio/mpeg">
-          Your browser does not support audio.
-        </audio>
-
-        <div class="audio-controls">
-          <button class="audio-button" id="audioPlayBtn" onclick="togglePlayAudio()">Play</button>
-          <div class="audio-details">
-            <div class="audio-title">Student Review</div>
-            <div class="audio-progress-bar" id="audioProgressBar" onclick="seekAudio(event)">
-              <div class="audio-progress" id="audioProgress"></div>
-            </div>
-            <div class="audio-time">
-              <span id="audioCurrentTime">0:00</span>
-              <span id="audioDuration">0:00</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
   <button id="welcomeSoundBtn" onclick="playWelcomeSound(); showWelcomeToast();">Click to hear welcome</button>
   <div id="welcomeToast">Welcome to YS STORE!</div>
 

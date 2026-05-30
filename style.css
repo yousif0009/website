@@ -2,12 +2,17 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
   font-family: Arial, sans-serif;
   background-color: #0f172a;
   color: #e2e8f0;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -458,7 +463,9 @@ nav {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  height: 170px;
+  aspect-ratio: 16 / 9;
+  min-height: 180px;
+  max-height: 320px;
   background-color: #000000;
   margin-bottom: 14px;
 }
@@ -466,7 +473,8 @@ nav {
 .video-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #000000;
 }
 
 .video-overlay {
@@ -487,6 +495,7 @@ nav {
 }
 
 footer {
+  margin-top: auto;
   text-align: center;
   padding: 22px 0;
   color: #94a3b8;
