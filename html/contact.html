@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YS STORE - Contact Us</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">YS STORE</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section class="section">
+      <h1>Contact Us</h1>
+      <p class="text">If you have questions, send a message and we will reply soon.</p>
+    </section>
+
+    <section class="section contact-card">
+      <form onsubmit="handleFormSubmit(); return false;">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="John Doe" required>
+
+        <label for="emailAddr">Email Address</label>
+        <input type="email" id="emailAddr" placeholder="example@example.com" required>
+
+        <label for="msgSubject">Subject</label>
+        <input type="text" id="msgSubject" placeholder="Question" required>
+
+        <label for="userMsg">Message</label>
+        <textarea id="userMsg" rows="5" placeholder="Write your message here" required></textarea>
+
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 YS STORE</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

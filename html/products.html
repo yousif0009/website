@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YS STORE - Products</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">YS STORE</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section class="section">
+      <h1>Products</h1>
+      <p class="text">Choose from our simple digital products that help with focus, habits, and planning.</p>
+    </section>
+
+    <section class="section">
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-badge">E-Book</div>
+          <img src="../images/focus_ebook.png" alt="Focus E-Book" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400'">
+          <h3>Ultimate Focus E-Book</h3>
+          <p>Clear and simple steps to improve focus and reduce distractions.</p>
+          <div class="price">$15.00</div>
+          <button class="button button-small" onclick="buyDigitalProduct('Ultimate Focus E-Book')">Buy Now</button>
+        </div>
+        <div class="card">
+          <div class="card-badge">Course</div>
+          <img src="../images/habit_course.png" alt="Habit Course" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400'">
+          <h3>Habit Building Course</h3>
+          <p>Simple lessons to help you build good habits step by step.</p>
+          <div class="price">$49.00</div>
+          <button class="button button-small" onclick="buyDigitalProduct('Habit Building Course')">Buy Now</button>
+        </div>
+        <div class="card">
+          <div class="card-badge">Template</div>
+          <img src="../images/notion_template.png" alt="Templates" onerror="this.src='https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=400'">
+          <h3>Productivity Templates</h3>
+          <p>Ready to use pages for planning tasks, habits, and goals.</p>
+          <div class="price">$9.99</div>
+          <button class="button button-small" onclick="buyDigitalProduct('Productivity Templates')">Buy Now</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 YS STORE</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

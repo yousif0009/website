@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YS STORE - Gallery</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">YS STORE</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section class="section">
+      <h1>Gallery</h1>
+      <p class="text">Browse our product previews and sample visuals.</p>
+    </section>
+
+    <section class="section">
+      <div class="gallery-tabs">
+        <button class="tab-btn active" onclick="filterGallery('all', this)">All</button>
+        <button class="tab-btn" onclick="filterGallery('image', this)">Images</button>
+        <button class="tab-btn" onclick="filterGallery('video', this)">Videos</button>
+      </div>
+
+      <div class="card-grid">
+        <div class="card gallery-item" data-category="image">
+          <img src="../images/focus_ebook.png" alt="E-Book cover" onerror="this.src='https://images.unsplash.com/photo-1614849963640-9cc74b2a826f?w=400'">
+          <h3>E-Book Cover</h3>
+          <p>A clean product cover for the focus ebook preview.</p>
+          <button class="button button-small" onclick="downloadPreview('E-Book Cover')">Download Sample</button>
+        </div>
+        <div class="card gallery-item" data-category="image">
+          <img src="../images/notion_template.png" alt="Template screenshot" onerror="this.src='https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=400'">
+          <h3>Template Preview</h3>
+          <p>See a sample of the productivity planner templates.</p>
+          <button class="button button-small" onclick="downloadPreview('Template Preview')">Download Sample</button>
+        </div>
+        <div class="card gallery-item" data-category="video">
+          <div class="video-container">
+            <video id="galleryVideo1" loop>
+              <source src="../videos/preview.mp4" type="video/mp4">
+              Your browser does not support video.
+            </video>
+            <div class="video-overlay" id="galleryOverlay1" onclick="togglePlayGalleryVideo()">Play Video</div>
+          </div>
+          <h3>Course Preview</h3>
+          <p>A short lesson preview from the habit building course.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 YS STORE</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
