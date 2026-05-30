@@ -25,6 +25,20 @@
       <button class="button hero-button" onclick="goToProducts()">Browse Products</button>
     </section>
 
+    <section class="video-intro">
+      <div class="video-text">
+        <h2>Store Introduction</h2>
+        <p>Watch this short intro to learn how YS STORE helps you stay organized, build habits, and discover useful digital products for your daily routine.</p>
+      </div>
+      <div class="video-frame">
+        <video id="introVideo" muted playsinline>
+          <source src="videos/hero_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button class="video-play-button" onclick="toggleIntroVideo()">Play</button>
+      </div>
+    </section>
+
     <section class="section">
       <h2 class="section-title">Featured Products</h2>
       <div class="card-grid">
@@ -35,6 +49,7 @@
           <p>Learn how to stay focused with a simple and clear guide.</p>
           <div class="price">$15.00</div>
           <button class="button button-small" onclick="showBuyAlert('Ultimate Focus E-Book')">Instant Access</button>
+          <button class="button button-detail button-small" onclick="showProductDetails('Ultimate Focus E-Book','images/focus_ebook.png','Full focus book with step-by-step methods to eliminate distractions and improve daily productivity. Includes quick exercises and planning templates.','$15.00')">Show Details</button>
         </div>
         <div class="card">
           <div class="card-badge">Popular</div>
@@ -43,6 +58,7 @@
           <p>Easy templates for planning your day and tracking your habits.</p>
           <div class="price">$9.99</div>
           <button class="button button-small" onclick="showBuyAlert('Productivity Templates')">Instant Access</button>
+          <button class="button button-detail button-small" onclick="showProductDetails('Productivity Templates','images/notion_template.png','A set of ready-to-use productivity templates for daily planning, habit tracking, and goal setting. Perfect for busy learners.','$9.99')">Show Details</button>
         </div>
       </div>
     </section>
@@ -76,6 +92,16 @@
 
   <button id="welcomeSoundBtn" onclick="playWelcomeSound(); showWelcomeToast();">Click to hear welcome</button>
   <div id="welcomeToast">Welcome to YS STORE!</div>
+
+  <div id="productDetailModal" class="modal" onclick="closeProductDetails()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeProductDetails()">×</button>
+      <img id="detailImage" class="product-detail-image" src="" alt="Product detail image">
+      <h2 id="detailTitle" class="product-detail-title"></h2>
+      <p id="detailDescription" class="product-detail-text"></p>
+      <div class="product-detail-price" id="detailPrice"></div>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2026 YS STORE</p>

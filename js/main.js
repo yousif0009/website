@@ -4,6 +4,53 @@ function showBuyAlert(productName) {
   alert('You selected ' + productName + '. Thank you!');
 }
 
+function showProductDetails(title, imageUrl, description, price) {
+  var modal = document.getElementById('productDetailModal');
+  var detailTitle = document.getElementById('detailTitle');
+  var detailImage = document.getElementById('detailImage');
+  var detailDescription = document.getElementById('detailDescription');
+  var detailPrice = document.getElementById('detailPrice');
+
+  if (!modal || !detailTitle || !detailImage || !detailDescription || !detailPrice) {
+    return;
+  }
+
+  detailTitle.textContent = title;
+  detailImage.src = imageUrl;
+  detailImage.alt = title;
+  detailDescription.textContent = description;
+  detailPrice.textContent = price;
+
+  modal.classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProductDetails() {
+  var modal = document.getElementById('productDetailModal');
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove('visible');
+  document.body.style.overflow = 'auto';
+}
+
+function toggleIntroVideo() {
+  var introVideo = document.getElementById('introVideo');
+  var playButton = document.querySelector('.video-play-button');
+  if (!introVideo || !playButton) {
+    return;
+  }
+
+  if (introVideo.paused) {
+    introVideo.play();
+    playButton.classList.add('hidden');
+  } else {
+    introVideo.pause();
+    playButton.classList.remove('hidden');
+  }
+}
+
 function buyDigitalProduct(productName) {
   alert('Thank you! You will receive the checkout link for ' + productName + '.');
 }
