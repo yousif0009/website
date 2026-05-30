@@ -1,6 +1,4 @@
-﻿// Simple JavaScript functions for YS STORE
-
-function showBuyAlert(productName) {
+﻿function showBuyAlert(productName) {
   alert('You selected ' + productName + '. Thank you!');
 }
 
